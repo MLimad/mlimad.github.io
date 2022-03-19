@@ -1,0 +1,689 @@
+
+/* Normalize */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.6;
+}
+
+ul{
+    list-style: none;
+    display:flex;
+}
+
+:root{
+    --main-color:#0d6efd;
+    --sec-color:#ecf0f1;
+    --gold-color:#FFD700;
+    --main-dark:#1B262C;
+    --sec-dark:#BBE1FA;
+    --third-dark:#0F4C75;
+
+}
+
+#btn-back-to-top,#btn-dark-mode {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 9999;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+
+  #btn-dark-mode{
+	bottom: 73px;
+	right: 22px;
+}
+
+
+.main-heading h1{
+    font-weight: 800;
+    position: relative;
+    color: var(--main-color);
+}
+
+.main-heading h1::before{
+    content: "";
+    width: 120px;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+.main-heading h1::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border:3px solid var(--main-color);
+}
+
+
+/* Main Style */
+
+body{
+    position: relative;
+    overflow: hidden;
+}
+
+/* Loader */
+#loader{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--main-color);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
+
+
+/* Header */
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+header::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.438);
+    z-index: 1;
+}
+
+.nav-link.active{
+    font-weight: 700;
+    border-bottom: 2px solid var(--main-color);
+}
+
+
+  #splide1{
+      width: 100%;
+      height: 100vh;
+  }
+
+
+
+  header nav {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
+  }
+
+
+
+  header .content-header{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%) translateY(-50%);
+     
+  }
+
+
+  header .content-header  p{
+      text-align: center;
+      color: white;
+      margin: auto;
+      font-size: 20px;
+      margin: 10px 0;
+      padding: 10px;
+
+  }
+
+/* Who we are */
+
+.who-we-are{
+    padding: 100px 0;
+}
+
+.who-we-are h2{
+    border-right: 4px solid var(--main-color);
+    padding-right: 14px;
+    color: var(--main-color);
+}
+
+
+
+.who-we-are p{
+    padding: 20px 0 ;
+    text-align: justify;
+    margin: 0;
+    border-right: 3px sloid var(--main-color);
+}
+
+.who-we-are .img-left{
+    height: 500px;
+}
+
+.who-we-are .img-left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Counter */
+.counter{
+    background-color: var(--sec-color);
+    padding: 80px 0;
+}
+
+/* Subscription */
+
+.sub-iptv{
+    padding: 100px 0 0;
+}
+
+.sub-iptv .offer{
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.5s;
+    transform: scale(0.9);
+    position: relative;
+
+}
+
+
+.sub-iptv .offer:hover{
+    background-color: #212529;
+    color: white;
+}
+
+.sub-iptv .offer:hover h4{
+    color: white !important;
+}
+
+.sub-iptv .offer i{
+    color: var(--main-color);
+}
+
+.sub-iptv .offer.gold i{
+    color: white;
+}
+
+
+.sub-iptv .offer.gold{
+    background-color: var(--main-color);
+    color: white;
+    transition: 0.5s;
+    transform: scale(1);
+}
+
+@media only screen and (max-width: 600px) {
+        .sub-iptv .offer.gold{
+            transform: scale(0.9);
+
+        }
+}
+
+
+.sub-iptv .offer.gold:hover{
+    background-color: tomato;
+    color: white;
+}
+
+.sub-iptv .offer h4{
+    font-weight: 800;
+    padding-top: 15px;
+}
+.sub-iptv .offer.gold h4{
+    color: white;
+    font-weight: 800;
+}
+.sub-iptv .offer a{
+    width: 150px;
+    margin: auto;
+}
+
+
+/* Features */
+.features-iptv {
+    padding:90px 0 90px;
+}
+.features-iptv i{
+    color: var(--main-color);
+    transition: .6s;
+}
+.features-iptv h1{
+    font-weight: 800;
+    padding-bottom:15px ;
+    color: var(--main-color);
+    position: relative;
+    z-index: 1;
+}
+
+.features-iptv h1::before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	bottom: 2px;
+	width: 228px;
+	height: 4px;
+	background-color: var(--gold-color);
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .features-iptv h1 {
+        margin-top: 32px;
+        text-align: center;
+    }
+}
+
+.features-iptv .video-player {
+	max-width: 459px;
+    height: 340px;
+     border-radius: 5px;
+    overflow: hidden;
+	position: relative;
+	border-top: 8px solid var(--main-color);
+	margin: 10px;
+}
+
+
+.features-iptv .video-player img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.features-iptv p{
+    transition: .6s;
+}
+
+.features-iptv  p:hover{
+    padding-right: 20px;
+}
+
+.features-iptv  p:hover i{
+    color: var(--gold-color);
+}
+
+
+
+
+/* all-devices */
+
+.all-devices{
+    padding: 90px 0;
+    background-color: var(--main-color);
+    color: white;
+    background-image: url("../images/image15.png");
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.all-devices::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+    background-color: #0d6efdf2;
+        z-index: -1;
+}
+.all-devices h3{
+    font-weight: lighter;
+    position: relative;
+    z-index: 1;
+}
+.all-devices h3::before {
+	content: "";
+	position: absolute;
+	top: 23%;
+	left: 38%;
+	background-color: tomato;
+	width: 100px;
+	height: 100px;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: -1;
+	border-radius: 50%;
+}
+.all-devices h3 span{
+    font-weight: 800;
+}
+
+.all-devices .device-item{
+    transition: 0.5s;
+}
+
+.all-devices .device-item:hover{
+    transform: translateY(-10px);
+}
+
+
+/* feedback */
+.feedback{
+    padding: 100px 0;
+}
+
+.feedback .gallery-feedback{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.feedback .gallery-feedback .item{
+    width: 250px;
+    height: 210px;
+    background-color: #f9f9f9;
+    margin: 10px;
+    border-radius: 40px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.6s;
+    border: 2px solid transparent;
+
+}
+
+.feedback .gallery-feedback .item:hover {
+    border: 2px solid var(--main-color);
+
+}
+
+.feedback .gallery-feedback .item::before {
+	content: "";
+	background-color: #ffffff82;
+	width: 168%;
+	height: 114px;
+	position: absolute;
+	top: -153px;
+	right: -223px;
+	z-index: 1;
+	transform: rotate(40deg);
+	transition: 0.6s;
+	filter: blur(20px);
+}
+
+
+.feedback .gallery-feedback .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s;
+    opacity: 0.8;
+}
+
+
+
+.feedback .gallery-feedback .item:hover img{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.feedback .gallery-feedback .item:hover::before{
+    position: absolute;
+    top: 224px;
+    right: 63px;
+}
+
+/* box-reserve */
+.box-reserve{
+   
+    color: white;
+}
+
+.box-reserve .right{
+    height: 450px;
+    background-image: url(../images/iptv-definition.jpg);
+    background-size: cover;
+}
+.box-reserve h2{
+    font-weight: 800;
+}
+.box-reserve .countdown span{
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        display: flex;
+        font-size: 50px;
+        justify-content: center;
+        align-items: center;
+
+}
+
+.box-reserve .countdown span div{
+    position: relative;
+}
+.box-reserve .countdown span div::before{
+    content: attr(data-name);
+    color: white;
+    font-size: 13px;
+    position:absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+/* pay-method */
+
+.pay-methods{
+    padding: 100px 0;
+
+}
+
+
+.pay-methods .box-methods-pay{
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    padding: 20px 10px;
+    margin: 10px;
+    transition: 0.6s;
+    color: var(--main-color);
+}
+
+@media only screen and (max-width: 600px) {
+    .pay-methods .box-methods-pay {
+        width: 50%;
+        margin: 10px auto;
+    }
+}
+
+.pay-methods .box-methods-pay:hover{
+    background-color: var(--main-color);
+    color: white;
+    transform: translateY(-10px);
+}
+
+/* Contact */
+
+.contact{
+    padding: 100px 0;
+    background-color: var(--sec-color);
+}
+
+.contact .form-control{
+    background-color: #f2656540;
+}
+
+.contact h2 i{
+    color:  var(--main-color);
+}
+.contact p{
+    text-align: justify;
+    margin: 10px  30px 40px;
+    border-right: 4px solid var(--main-color);
+    padding-right: 18px;
+}
+
+
+.contact .social-icons li{
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: 0.6s;
+
+}
+.contact .social-icons li:hover{
+    background-color:#212529 ;
+    
+}
+
+.contact .social-icons li a{
+    color: white;
+}
+
+/* footer */
+footer{
+    padding: 40px 0;
+    background-color: #212529;
+    color: white;
+}
+
+footer li{
+    transition: 0.5s;
+    border-right: 2px solid transparent;
+
+}
+
+footer li:hover{
+    border-right: 2px solid var(--main-color);
+    padding-right: 10px;
+}
+
+
+/* Dark Mode */
+
+.dark{
+    background-color: var(--main-dark) !important;
+    color: var(--sec-dar);
+}
+
+.dark p , 
+ .dark h1,
+ .dark  h2 ,
+ .dark h5 ,
+ .dark span,
+ .dark .form-label{
+    color: var(--sec-dark);
+}
+
+.dark .counter,
+.dark .sub-iptv .offer ,
+.dark .all-devices::before,
+.dark .box-reserve .left,
+.dark .main-heading h1::before,
+.dark .main-heading h1::after,
+.dark .box-methods-pay,
+.dark .contact
+{
+    background-color: var(--third-dark) !important;
+}
+
+.dark .features-iptv h1::before{
+    background-color: var(--third-dark);
+}
+
+.dark .all-devices h3::before{
+    background-color: var(--main-dark);
+}
+
+.dark .box-methods-pay h4{
+    color: var(--sec-dark);
+}
+
+.dark .form-control {
+    background-color: var(--third-dark);
+}
